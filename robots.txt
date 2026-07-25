@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iamagathodamon.github.io/station-downloads/sitemap.xml
+Sitemap: https://store.agathodamon.com/sitemap.xml
