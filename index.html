@@ -176,6 +176,11 @@
     if (v) { utm[k] = v; has = true; }
   });
   if (!has) return;
+  var refSource = utm.utm_campaign || utm.utm_source;
+  if (refSource) {
+    var ref = refSource.replace(/[^A-Za-z0-9_-]/g, '').slice(0, 200);
+    if (ref) utm.client_reference_id = ref;
+  }
   var qs = new URLSearchParams(utm).toString();
   document.querySelectorAll('a.buy').forEach(function(a){
     var href = a.getAttribute('href');
